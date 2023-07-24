@@ -9,6 +9,7 @@ import {
   RouterProvider,
   useRouteError,
 } from "react-router-dom";
+import SignUp from './Pages/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
     errorElement: <ErrorPage />,
   }
 ]);
