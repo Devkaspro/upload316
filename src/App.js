@@ -3,6 +3,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Service from './Pages/Service';
 import Contact from './Pages/Contact';
+import SignUp from './Pages/SignUp';
 
 import {
   createBrowserRouter,
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
     errorElement: <ErrorPage />,
   }
 ]);
