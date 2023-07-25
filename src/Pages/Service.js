@@ -10,18 +10,18 @@ const Service = () => {
             <FeaturesMainContainer>
                 <FeaturesTitle>{FEATURES_TITLE}</FeaturesTitle>
                 <FeaturesContainer>
-                    {features.map((feature)=>(
-                    <FeatureDiv key={feature.id}>
-                        <FeaturedIconsDetails>
-                            <FeaturedIcons>
-                                {feature.icon}
-                            </FeaturedIcons>
-                            <p> {feature.tiitle} </p>
-                        </FeaturedIconsDetails>
-                        <FeatureDiscription>
-                            <p>{feature.description} </p>
-                        </FeatureDiscription>
-                    </FeatureDiv>
+                    {features.map((feature) => (
+                        <FeatureDiv key={feature.id}>
+                            <FeaturedIconsDetails>
+                                <FeaturedIcons>
+                                    {feature.icon}
+                                </FeaturedIcons>
+                                <p> {feature.tiitle} </p>
+                            </FeaturedIconsDetails>
+                            <FeatureDiscription>
+                                <p>{feature.description} </p>
+                            </FeatureDiscription>
+                        </FeatureDiv>
                     ))}
                 </FeaturesContainer>
             </FeaturesMainContainer>

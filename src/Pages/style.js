@@ -140,3 +140,9 @@ export const DragandDropIcon = styled.div`
     padding-left: 2px;
     margin-right: 10px
 `;
+
+// export default function Upload page ()
+
+export const UploadContainer = styled.div`
+
+`;

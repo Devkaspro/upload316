@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <>
       <Wrapper>
-        <Logo> <img src="" alt="Upload316" /> </Logo>
+        <Logo> <img src="https://img.freepik.com/premium-vector/modern-letter-c-wing-logo-illustration-design_608606-230.jpg" alt="Upload316" /> </Logo>
         <NavbarMenu>
           <NavbarLink to={'/'}> Home </NavbarLink>
           <NavbarLink to={'/about'}> About </NavbarLink>

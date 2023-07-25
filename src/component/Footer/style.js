@@ -48,6 +48,8 @@ export const FooterGroup3 = styled.div`
 export const CompanyLogo = styled.div`
     ${ '' /* width: 200px; */ }
     ${ '' /* padding-left: 15%; */ }
+    display: -webkit-inline-box;
+
 
 `;
 export const CompanyDetails = styled.div`

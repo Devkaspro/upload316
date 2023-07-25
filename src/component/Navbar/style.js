@@ -18,7 +18,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.div`
-
+    width: 100px;
+    img{
+        max-width: 90%;
+    }
 `;
 
 export const NavbarMenu = styled.div`

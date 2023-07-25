@@ -1,5 +1,7 @@
 import React from 'react';
 import { CompanyDetails, CompanyLogo, CompanyTable, ContributersDetails, FooterGroup1, FooterGroup2, FooterGroup3, FooterLink, FooterLogoType, FooterMainContainer, FooterMarketingFooter, FooterMarketingSubFooter, ResourcesDetails } from './style';
+import { COMPANY_ADDRESS, COMPANY_EMAIL_ADDRESS, COMPANY_PHONE_NUMBER } from '../../constants/constant';
+import { Logo } from '../Navbar/style';
 
 const Footer = () => {
     return (
@@ -7,13 +9,12 @@ const Footer = () => {
             <FooterMarketingFooter>
                 <FooterLogoType>
                     <CompanyLogo>
-                        <img src="" alt="Logo" />
+                        <Logo> <img src="https://img.freepik.com/premium-vector/modern-letter-c-wing-logo-illustration-design_608606-230.jpg" alt="Upload316" /> </Logo>
                     </CompanyLogo>
                     <CompanyDetails>
-                        Phone: +974-585-1234<br />
-                        Email: support@upload316.com<br />
-                        Address:<br />
-                        PO Box 123, Mohali,<br /> India
+                        {COMPANY_PHONE_NUMBER}<br />
+                        {COMPANY_EMAIL_ADDRESS}<br />
+                        {COMPANY_ADDRESS}
                     </CompanyDetails>
 
                 </FooterLogoType>
