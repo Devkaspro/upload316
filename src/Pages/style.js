@@ -94,16 +94,21 @@ export const FeaturesTitle = styled.h2`
     
 `;
 export const FeaturesContainer = styled.div`
-    
+    display:flex;
+    flex-wrap:wrap;
+
 `;
 export const FeatureDiv = styled.div`
     ${ '' /* ${ '' /* float: left; */ }
     display: table-cell;
     margin-right: 2.3576515979%;
-    width: 48.821174201%;
+    width: 43.7%;
     margin-bottom: 24px;
     padding: 0 20px;
     box-shadow: rgba(3, 46, 78, 0.1) 3px 1px 12px 5px;
+    @media (max-width:950px){
+        width: 95%;
+    }
 
 
 `;
