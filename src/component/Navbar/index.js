@@ -19,11 +19,11 @@ function Navbar() {
   return (
     <>
       <Wrapper>
-        <Logo> Logo </Logo>
+        <Logo> <img src="" alt="Upload316" /> </Logo>
         <NavbarMenu>
           <NavbarLink to={'/'}> Home </NavbarLink>
           <NavbarLink to={'/about'}> About </NavbarLink>
-          <NavbarLink to={'/service'}> Service </NavbarLink>
+          <NavbarLink to={'/service'}> Services </NavbarLink>
           <NavbarLink to={'/contact'}> Contact</NavbarLink>
         </NavbarMenu>
         <NavBtn>
@@ -63,7 +63,7 @@ function Navbar() {
                 <NavbarLink to={'/about'}> About </NavbarLink>
               </MenuItem>
               <MenuItem>
-                <NavbarLink to={'/service'}> Service </NavbarLink>
+                <NavbarLink to={'/service'}> Services </NavbarLink>
               </MenuItem>
               <MenuItem>
                 <NavbarLink to={'/contact'}> Contact</NavbarLink>

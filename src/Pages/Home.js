@@ -36,6 +36,11 @@ const Home = () => {
                 </ButtonContainer>
             </HomeContainer>
             <div style={{ height: '400px' }} />
+            <div>
+                This is the service page. Coming Soon...
+            </div>
+            {/* <FeaturesAndServices /> */}
+            <div style={{ height: '400px' }} />
             <Footer />
         </>
     );
