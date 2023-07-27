@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Button, Card, ContentFile, ContentIcon, ContentTitle, CrossButton, Downloading, DragDrop, InputFile, Paragraph, ProgressBar, SizePercentage, Text, Title, Wrapper, progressLine } from './style';
 import { CARD_TITLE, DRAG_DROP_TITLE, SELECT_BUTTON } from '../../constants/constant';
 import { convertToMB } from '../../Helpers/helper';
+import { FirstButton } from '../../Pages/style';
 
 //StopPropagation is stop the click event from bubling up.
 function dragEnter(e) {
@@ -18,9 +19,10 @@ function handleDragOver(e) {
 
 const uploadObj = { loaded: 0, total: 0, title: "", content: {}, done: false };
 
-function Upload() {
+function Upload({ handleQrGenerate }) {
   const inputRef = useRef();
   const [uploading, setUploading] = useState(uploadObj);
+  const [qrCodeObj, setQrCodeObj] = useState({});
 
   const Handledrop = (e) => {
     console.log('Dropped');
@@ -45,9 +47,10 @@ function Upload() {
 
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4)
-        alert(`Server Response ${ xhr.status }`);
+      // alert(`Server Response ${ xhr.status }`);
       {
         console.log(this.responseText);
+        setQrCodeObj(this.responseText)
         setUploading((data) => ({
           ...data, content: this.responceText, done: true
         }));
@@ -112,17 +115,17 @@ function Upload() {
                 <ProgressBar>
                   <div style={{
                     ...progressLine,
-                    width: `${ percentage }%`,
+                    width: `${percentage}%`,
                     backgroundColor: 'red', height: '10px'
                   }} />
                 </ProgressBar>
                 <SizePercentage>
                   <Text>
-                    {uploading.done ? `${ total }MB` : `${ loaded || 0.2 } of ${ total || 2.0 }MB`}
+                    {uploading.done ? `${total}MB` : `${loaded || 0.2} of ${total || 2.0}MB`}
                   </Text>
                   {!uploading.done ? (
                     <Text>
-                      {`${ percentage || 0 }%`}
+                      {`${percentage || 0}%`}
                     </Text>
                   ) : <Text />}
                 </SizePercentage>
@@ -130,7 +133,16 @@ function Upload() {
             </ContentFile>
           </Downloading>
         ) : null}
+        <FirstButton>
+        <span 
+
+        onClick={()=>handleQrGenerate(qrCodeObj)}
+        >
+          Generate QR Code
+        </span>
+      </FirstButton>
       </Card>
+      
     </Wrapper>
   );
 }

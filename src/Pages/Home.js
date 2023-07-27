@@ -1,17 +1,25 @@
 import InsightsIcon from '@mui/icons-material/Insights';
 import MultilineChartIcon from '@mui/icons-material/MultilineChart';
 import { IconButton } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../component/Footer/Footer';
 import Navbar from '../component/Navbar';
 import { ButtonContainer, Discription, FirstButton, HomeContainer, SecButton, Title, UploadContainer } from './style';
 import Upload from '../component/Upload';
 import "../App.css";
+import QrCodeBox from '../component/QRCode/QrCodeBox';
 const Home = () => {
-    const [isSlideDown, setIsSlideDown] = useState(false);
-    const handleButtonClick = () => {
-        setIsSlideDown(!isSlideDown);
-    };
+    const [qrCodeObj, setQrCodeObj] = useState();
+    const [link,setLink]=useState('');
+
+    useEffect(() => {
+        setLink(qrCodeObj?.downloadLink)
+        console.log(link,qrCodeObj)
+    }, [qrCodeObj?.downloadLink])
+    const handleQrGenerate = (qrObj) => {
+        console.log(qrObj)
+        setQrCodeObj(JSON.parse(qrObj));
+    }
     return (
         <>
             <Navbar />
@@ -22,17 +30,13 @@ const Home = () => {
                     Diawi upload-316 is a tool for developers to deploy Development and In-house applications directly to the devices
                 </Discription>
                 <ButtonContainer>
-                    <FirstButton onClick={handleButtonClick}>
+                    <FirstButton>
                         <IconButton>
                             <MultilineChartIcon />
                         </IconButton>
                         <span>
                             Web Analytics
                         </span>
-                        {/* <button onClick={handleButtonClick}>Toggle Slide Down</button> */}
-                        {/* <div className={`slide-container ${ isSlideDown ? 'slide-down' : '' }`}>
-                            <Upload />
-                        </div> */}
                     </FirstButton>
                     <SecButton>
                         <IconButton>
@@ -44,8 +48,11 @@ const Home = () => {
                     </SecButton>
                 </ButtonContainer>
                 <UploadContainer>
-                    <Upload className={`slide-container ${ isSlideDown ? 'slide-down' : '' }`} />
+                    <Upload handleQrGenerate={handleQrGenerate} />
                 </UploadContainer>
+                <div>
+                    {link ? <QrCodeBox link={link} /> : ""}
+                </div>
             </HomeContainer>
             <div style={{ height: '400px' }} />
             <Footer />
