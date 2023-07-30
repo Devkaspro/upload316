@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled.div`
     position: sticky;
     top: 0px;
-    height: 70px;
+    height: 95px;
     color: #41807b;
     display: flex;
     font-size: 20px;
@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     background-color:#fff ;
     box-shadow: rgba(3, 46, 78, 0.1) 0px 1px 3px -1px;
     overflow-x: hidden;
+    z-index:1;
 
 `;
 

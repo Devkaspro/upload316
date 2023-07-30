@@ -12,11 +12,10 @@ export const Wrapper = styled.div`
 
 export const Card = styled.div`
     width: calc(100% - 300px);
-    //height: calc(100% - 300px);
     min-width: 300px;
     border-radius: 5px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    // background: aliceblue;
+    background: white;
 
     padding: 30px 50px;
 `;
