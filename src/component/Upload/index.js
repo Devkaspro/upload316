@@ -106,7 +106,7 @@ function Upload({ handleQrGenerate }) {
           <Downloading>
             {uploading.done ? <CrossButton onClick={() => handleCrossButton()} /> : null}
             <ContentFile>
-              <ContentIcon src={require("../../assets/Images/jpg.png")} />
+              <ContentIcon src={require("../../assets/Images/logo2.jpeg")} />
               <ContentTitle>
                 <Text>
                   {title}

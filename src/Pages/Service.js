@@ -1,8 +1,9 @@
 import React from 'react';
 import Footer from '../component/Footer/Footer';
 import Navbar from '../component/Navbar';
-import { FEATURES_TITLE, features } from '../constants/constant';
+import { FEATURES_TITLE } from '../constants/constant';
 import { FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle } from './style';
+import { features } from '../Helpers/helper';
 const Service = () => {
     return (
         <>
@@ -25,7 +26,7 @@ const Service = () => {
                     ))}
                 </FeaturesContainer>
             </FeaturesMainContainer>
-            <div style={{ height: '400px' }} />
+            {/* <div style={{ height: '400px' }} /> */}
             <Footer />
         </>
     );

@@ -12,8 +12,39 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(name);
+
+        let formData = {
+            name: name,
+            email: email,
+            message: message
+        };
+        console.log(formData);
+
+        // let xhr = new XMLHttpRequest();
+        // xhr.open('post', '/');
+        // xhr.setRequestHeader('content-type', 'application/json');
+        // xhr.onload = function () {
+        //     console.log(xhr.responceText);
+        //     if (this.responseText = 'success')
+        //     {
+        //         name.name = "";
+        //         email.email = "";
+        //         message.message = "";
+
+        //     }
+        //     else
+        //     {
+        //         // error handling code here...
+        //         alert(
+        //             "There was an issue sending your message please try again later."
+        //         );
+        //     }
+        // };
+        // xhr.send(JSON.stringify(formData));
     };
+
+
+
     return (
         <>
             <Navbar />

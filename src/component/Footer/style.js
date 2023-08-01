@@ -12,9 +12,6 @@ export const FooterMainContainer = styled.div`
     justify-content:center;
     align-items:center;
     text-align: center;
-    @media (max-width:950px){
-        margin-top:-10%;
-        };
             
 
 `;

@@ -6,8 +6,8 @@ import Navbar from '../component/Navbar';
 import { NavbarLink } from '../component/Navbar/style';
 import QrCodeBox from '../component/QRCode/QrCodeBox';
 import Upload from '../component/Upload';
-import { CONTACT_US_BTN, FEATURES_TITLE, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE, SERVICES_BTN, features } from '../constants/constant';
-import { ButtonContainer, Discription, FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle, FirstButton, HomeContainer, QrCodeContainer, SecButton, Title, UploadContainer } from './style';
+import { CONTACT_US_BTN, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE } from '../constants/constant';
+import { ButtonContainer, Discription, FirstButton, HomeContainer, QrCodeContainer, SecButton, Title, UploadContainer } from './style';
 
 const Home = () => {
     const [qrCodeObj, setQrCodeObj] = useState();
@@ -63,7 +63,7 @@ const Home = () => {
                     </FeaturesContainer>
                 </FeaturesMainContainer> */}
             </HomeContainer>
-            <div style={{ height: '400px' }} />
+            <div style={{ height: '200px' }} />
             <Footer />
         </>
     );

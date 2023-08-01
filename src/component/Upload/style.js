@@ -69,8 +69,8 @@ export const ContentFile = styled.div`
     //border : 1px solid red;
 `;
 export const ContentIcon = styled.img`
-    width: 75px;
-    height:90px;
+    width: 85px;
+    height: 100p
     // border: 1px solid;
     margin: 0 10px;
 
