@@ -41,7 +41,7 @@ export const Paragraph = styled.p`
 
 `;
 
-export const Button = styled.button`
+export const FileUploadBtn = styled.button`
     cursor: pointer;
 `;
 
@@ -103,8 +103,12 @@ export const progressLine = {
 };
 
 export const SizePercentage = styled.div`
-     display: flex;
+    display: flex;
     justify-content: space-between;
+`;
+export const QrGenerateButton = styled.div`
+    text-align: center;
+    margin-top: 30px;
 `;
 
 

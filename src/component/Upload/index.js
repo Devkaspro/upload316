@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
-import { Button, Card, ContentFile, ContentIcon, ContentTitle, CrossButton, Downloading, DragDrop, InputFile, Paragraph, ProgressBar, SizePercentage, Text, Title, Wrapper, progressLine } from './style';
-import { CARD_TITLE, DRAG_DROP_TITLE, SELECT_BUTTON } from '../../constants/constant';
+import { Card, ContentFile, ContentIcon, ContentTitle, CrossButton, Downloading, DragDrop, FileUploadBtn, InputFile, Paragraph, ProgressBar, QrGenerateButton, SizePercentage, Text, Title, Wrapper, progressLine } from './style';
+import { CARD_TITLE, DRAG_DROP_TITLE, GENERATE_QR_CODE, SELECT_BUTTON } from '../../constants/constant';
 import { convertToMB } from '../../Helpers/helper';
-import { FirstButton } from '../../Pages/style';
-
+import Button from '@mui/material/Button';
 //StopPropagation is stop the click event from bubling up.
 function dragEnter(e) {
   e.stopPropagation();
@@ -50,7 +49,7 @@ function Upload({ handleQrGenerate }) {
       // alert(`Server Response ${ xhr.status }`);
       {
         console.log(this.responseText);
-        setQrCodeObj(this.responseText)
+        setQrCodeObj(this.responseText);
         setUploading((data) => ({
           ...data, content: this.responceText, done: true
         }));
@@ -88,10 +87,10 @@ function Upload({ handleQrGenerate }) {
           onDrop={Handledrop}
         >
           <Paragraph>{DRAG_DROP_TITLE}</Paragraph>
-          <Button
+          <FileUploadBtn
             onClick={() => inputRef.current.click()}>
             {SELECT_BUTTON}
-          </Button>
+          </FileUploadBtn>
           <InputFile
             type="file"
             name="file"
@@ -113,36 +112,32 @@ function Upload({ handleQrGenerate }) {
                   {title}
                 </Text>
                 <ProgressBar>
-                  <div style={{
-                    ...progressLine,
-                    width: `${percentage}%`,
-                    backgroundColor: 'red', height: '10px'
-                  }} />
+                  <div style={{ ...progressLine, width: `${ percentage }%`, backgroundColor: 'red', height: '10px' }} />
                 </ProgressBar>
                 <SizePercentage>
                   <Text>
-                    {uploading.done ? `${total}MB` : `${loaded || 0.2} of ${total || 2.0}MB`}
+                    {uploading.done ? `${ total }MB` : `${ loaded || 0.2 } of ${ total || 2.0 }MB`}
                   </Text>
                   {!uploading.done ? (
-                    <Text>
-                      {`${percentage || 0}%`}
-                    </Text>
+                    <Text> {`${ percentage || 0 }%`} </Text>
                   ) : <Text />}
                 </SizePercentage>
               </ContentTitle>
             </ContentFile>
           </Downloading>
         ) : null}
-        <FirstButton>
-        <span 
-
-        onClick={()=>handleQrGenerate(qrCodeObj)}
-        >
-          Generate QR Code
-        </span>
-      </FirstButton>
+        <QrGenerateButton>
+          <Button
+            variant="contained"
+            disableElevation
+            color="success"
+            onClick={() => handleQrGenerate(qrCodeObj)}
+          >
+            {GENERATE_QR_CODE}
+          </Button>
+        </QrGenerateButton>
       </Card>
-      
+
     </Wrapper>
   );
 }

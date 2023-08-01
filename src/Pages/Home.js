@@ -1,58 +1,67 @@
-import InsightsIcon from '@mui/icons-material/Insights';
-import MultilineChartIcon from '@mui/icons-material/MultilineChart';
-import { IconButton } from '@mui/material';
+import Button from '@mui/material/Button';
 import React, { useEffect, useState } from 'react';
+import "../App.css";
 import Footer from '../component/Footer/Footer';
 import Navbar from '../component/Navbar';
-import { ButtonContainer, Discription, FirstButton, HomeContainer, SecButton, Title, UploadContainer } from './style';
-import Upload from '../component/Upload';
-import "../App.css";
+import { NavbarLink } from '../component/Navbar/style';
 import QrCodeBox from '../component/QRCode/QrCodeBox';
+import Upload from '../component/Upload';
+import { CONTACT_US_BTN, FEATURES_TITLE, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE, SERVICES_BTN, features } from '../constants/constant';
+import { ButtonContainer, Discription, FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle, FirstButton, HomeContainer, QrCodeContainer, SecButton, Title, UploadContainer } from './style';
+
 const Home = () => {
     const [qrCodeObj, setQrCodeObj] = useState();
-    const [link,setLink]=useState('');
+    const [link, setLink] = useState('');
 
     useEffect(() => {
-        setLink(qrCodeObj?.downloadLink)
-        console.log(link,qrCodeObj)
-    }, [qrCodeObj?.downloadLink])
+        setLink(qrCodeObj?.downloadLink);
+        console.log(link, qrCodeObj);
+    }, [qrCodeObj?.downloadLink]);
     const handleQrGenerate = (qrObj) => {
-        console.log(qrObj)
+        console.log(qrObj);
         setQrCodeObj(JSON.parse(qrObj));
-    }
+    };
     return (
         <>
             <Navbar />
             <HomeContainer>
-                <Title> Development & In-house Apps Wireless Installation.
-                </Title>
-                <Discription>
-                    Diawi upload-316 is a tool for developers to deploy Development and In-house applications directly to the devices
-                </Discription>
+                <Title>{HOMEPAGE_TITLE}</Title>
+                <Discription>{HOMEPAGE_DESCRIPTION}</Discription>
                 <ButtonContainer>
-                    <FirstButton>
-                        <IconButton>
-                            <MultilineChartIcon />
-                        </IconButton>
-                        <span>
-                            Web Analytics
-                        </span>
-                    </FirstButton>
+
+                    <NavbarLink to={'/service'}>
+                        <FirstButton>
+                            <Button disableElevation>{FEATURE_BTN}</Button>
+                        </FirstButton> </NavbarLink>
                     <SecButton>
-                        <IconButton>
-                            <InsightsIcon />
-                        </IconButton>
-                        <span >
-                            Speed Insights
-                        </span>
+                        <NavbarLink to={'/contact'}>
+                            <Button disableElevation>{CONTACT_US_BTN}</Button>
+                        </NavbarLink>
                     </SecButton>
                 </ButtonContainer>
                 <UploadContainer>
                     <Upload handleQrGenerate={handleQrGenerate} />
                 </UploadContainer>
-                <div>
+                <QrCodeContainer>
                     {link ? <QrCodeBox link={link} /> : ""}
-                </div>
+                </QrCodeContainer>
+                {/* <FeaturesMainContainer>
+                    <FeaturesTitle>{FEATURES_TITLE}</FeaturesTitle>
+                    <FeaturesContainer>
+                        {features.map((feature) => (
+                            <FeatureDiv key={feature.id}>
+                                <FeaturedIconsDetails>
+                                    <FeaturedIcons>
+                                        {feature.icon}
+                                    </FeaturedIcons>
+                                </FeaturedIconsDetails>
+                                <FeatureDiscription>
+                                    <p>{feature.description} </p>
+                                </FeatureDiscription>
+                            </FeatureDiv>
+                        ))}
+                    </FeaturesContainer>
+                </FeaturesMainContainer> */}
             </HomeContainer>
             <div style={{ height: '400px' }} />
             <Footer />
