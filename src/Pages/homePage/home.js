@@ -1,13 +1,13 @@
+import "../../App.css";
 import Button from '@mui/material/Button';
 import React, { useEffect, useState } from 'react';
-import "../App.css";
-import Footer from '../component/Footer/Footer';
-import Navbar from '../component/Navbar';
-import { NavbarLink } from '../component/Navbar/style';
-import QrCodeBox from '../component/QRCode/QrCodeBox';
-import Upload from '../component/Upload';
-import { CONTACT_US_BTN, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE } from '../constants/constant';
+import QrCodeBox from '../../component/qrCode/qrCodeBox';
+import Upload from '../../component/upload';
+import Footer from '../../component/footer/footer';
 import { ButtonContainer, Discription, FirstButton, HomeContainer, QrCodeContainer, SecButton, Title, UploadContainer } from './style';
+import Navbar from '../../component/navbar';
+import { CONTACT_US_BTN, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE } from '../../constants/constant';
+import { NavbarLink } from "../../component/navbar/style";
 
 const Home = () => {
     const [qrCodeObj, setQrCodeObj] = useState();
@@ -28,7 +28,6 @@ const Home = () => {
                 <Title>{HOMEPAGE_TITLE}</Title>
                 <Discription>{HOMEPAGE_DESCRIPTION}</Discription>
                 <ButtonContainer>
-
                     <NavbarLink to={'/service'}>
                         <FirstButton>
                             <Button disableElevation>{FEATURE_BTN}</Button>

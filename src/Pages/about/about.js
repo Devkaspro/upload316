@@ -1,9 +1,9 @@
 import React from 'react';
-import { AboutAndroid, AboutiOS } from '../Helpers/helper';
-import Footer from '../component/Footer/Footer';
-import Navbar from '../component/Navbar';
-import { ANDROID_APPS, IOS_APPS } from '../constants/constant';
+import { AboutAndroid, AboutiOS } from '../../helpers/helper';
+import { ANDROID_APPS, IOS_APPS } from '../../constants/constant';
+import Navbar from '../../component/navbar';
 import { AboutAndroidContainer, AboutLinkContainer, AboutMainContainer, AboutTable, AboutTitle, AboutiOSContainer } from './style';
+import Footer from '../../component/footer/footer';
 
 const About = () => {
     return (
