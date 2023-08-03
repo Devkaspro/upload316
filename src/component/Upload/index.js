@@ -22,6 +22,7 @@ function Upload({ handleQrGenerate }) {
   const inputRef = useRef();
   const [uploading, setUploading] = useState(uploadObj);
   const [qrCodeObj, setQrCodeObj] = useState({});
+  const [reaminingTime, setRemainingTime] = useState('');
 
   const Handledrop = (e) => {
     console.log('Dropped');
@@ -34,9 +35,7 @@ function Upload({ handleQrGenerate }) {
 
   const handleFiles = (file) => {
     console.log('file uploaded');
-    setUploading((data) => ({
-      ...data, title: file[0].name
-    }));
+    setUploading((data) => ({ ...data, title: file[0].name }));
     var data = new FormData();
     console.log("File-name", file[0].name);
     data.append("file", file[0], file[0].name);
@@ -46,13 +45,12 @@ function Upload({ handleQrGenerate }) {
 
     xhr.addEventListener("readystatechange", function () {
       if (this.readyState === 4)
-      // alert(`Server Response ${ xhr.status }`);
       {
         console.log(this.responseText);
         setQrCodeObj(this.responseText);
-        setUploading((data) => ({
-          ...data, content: this.responceText, done: true
-        }));
+        calculateRemainingTime(this.responseText);
+        console.log(this.responseText, "esponseText");
+        setUploading((data) => ({ ...data, content: this.responceText, done: true }));
       }
     });
 
@@ -65,6 +63,22 @@ function Upload({ handleQrGenerate }) {
 
   };
 
+  const calculateRemainingTime = (expirationDate) => {
+    // Assuming the expirationDate is a string representation of a date
+    const now = new Date();
+    const expirationTime = new Date(expirationDate);
+    const remainingMilliseconds = expirationTime.getTime() - now.getTime();
+
+    if (remainingMilliseconds > 0)
+    {
+      const minutes = Math.floor(remainingMilliseconds / (1000 * 60));
+      const seconds = Math.floor((remainingMilliseconds % (1000 * 60)) / 1000);
+      setRemainingTime(`${ minutes } minutes and ${ seconds } seconds`);
+    } else
+    {
+      setRemainingTime('Session Expired');
+    }
+  };
 
   const handleCrossButton = () => {
     console.log("working hear");
@@ -136,6 +150,10 @@ function Upload({ handleQrGenerate }) {
             {GENERATE_QR_CODE}
           </Button>
         </QrGenerateButton>
+        <div>
+          <p>Remaining Time: {reaminingTime}</p>
+          {console.log(reaminingTime)}
+        </div>
       </Card>
 
     </Wrapper>
