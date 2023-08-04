@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Card, ContentFile, ContentIcon, ContentTitle, CrossButton, Downloading, DragDrop, FileUploadBtn, InputFile, Paragraph, ProgressBar, QrGenerateButton, SizePercentage, Text, Title, Wrapper, progressLine } from './style';
 import { CARD_TITLE, DRAG_DROP_TITLE, GENERATE_QR_CODE, SELECT_BUTTON } from '../../constants/constant';
-import { convertToMB } from '../../helpers/helper';
+import { convertToMB } from '../../Helpers/helper';
 import Button from '@mui/material/Button';
 //StopPropagation is stop the click event from bubling up.
 function dragEnter(e) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CompanyDetails, CompanyLogo, CompanyTable, ContributersDetails, FooterGroup1, FooterGroup2, FooterGroup3, FooterLink, FooterLogoType, FooterMainContainer, FooterMarketingFooter, FooterMarketingSubFooter, ResourcesDetails } from './style';
 import { COMPANY_ADDRESS, COMPANY_EMAIL_ADDRESS, COMPANY_PHONE_NUMBER } from '../../constants/constant';
-import { Logo } from '../navbar/style';
+import { Logo } from '../Navbar/style';
 
 const Footer = () => {
     return (

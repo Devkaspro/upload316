@@ -1,9 +1,9 @@
 import './App.css';
-import Home from './pages/homePage/home';
-import About from './pages/about/about';
-import Service from './pages/service/service';
-import Contact from './pages/contactUs/contact';
-import SignUp from './pages/signup/signup';
+import Home from './Pages/homePage/home';
+import About from './Pages/about/about';
+import Service from './Pages/service/service';
+import Contact from './Pages/contactUs/contact';
+import SignUp from './Pages/signup/signup';
 
 import {
   createBrowserRouter,

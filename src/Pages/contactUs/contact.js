@@ -1,8 +1,8 @@
 import { TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import React, { useState } from 'react';
-import Footer from '../../component/footer/footer';
-import Navbar from '../../component/navbar';
+import Footer from '../../component/Footer/Footer';
+import Navbar from '../../component/Navbar';
 import { FormBoxContainer, FormMainContainer } from './style';
 
 const Contact = () => {

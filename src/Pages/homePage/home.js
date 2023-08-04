@@ -1,20 +1,20 @@
 import "../../App.css";
 import Button from '@mui/material/Button';
 import React, { useEffect, useState } from 'react';
-import QrCodeBox from '../../component/qrCode/qrCodeBox';
-import Upload from '../../component/upload';
-import Footer from '../../component/footer/footer';
+import QrCodeBox from '../../component/QRCode/QrCodeBox';
+import Upload from '../../component/Upload';
+import Footer from '../../component/Footer/Footer';
 import { ButtonContainer, Discription, FirstButton, HomeContainer, QrCodeContainer, SecButton, Title, UploadContainer } from './style';
-import Navbar from '../../component/navbar';
+import Navbar from '../../component/Navbar';
 import { CONTACT_US_BTN, FEATURE_BTN, HOMEPAGE_DESCRIPTION, HOMEPAGE_TITLE } from '../../constants/constant';
-import { NavbarLink } from "../../component/navbar/style";
+import { NavbarLink } from "../../component/Navbar/style";
 
 const Home = () => {
     const [qrCodeObj, setQrCodeObj] = useState();
     const [link, setLink] = useState('');
 
     useEffect(() => {
-        setLink(qrCodeObj?.downloadLink);
+        setLink('http://192.168.1.21:5001/upload/download/'+qrCodeObj?._id);
         console.log(link, qrCodeObj);
     }, [qrCodeObj?.downloadLink]);
     const handleQrGenerate = (qrObj) => {
