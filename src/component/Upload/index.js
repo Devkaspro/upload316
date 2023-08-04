@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Card, ContentFile, ContentIcon, ContentTitle, CrossButton, Downloading, DragDrop, FileUploadBtn, InputFile, Paragraph, ProgressBar, QrGenerateButton, SizePercentage, Text, Title, Wrapper, progressLine } from './style';
-import { CARD_TITLE, DRAG_DROP_TITLE, GENERATE_QR_CODE, SELECT_BUTTON } from '../../constants/constant';
-import { convertToMB } from '../../Helpers/helper';
+import { CARD_TITLE, DRAG_DROP_TITLE, GENERATE_QR_CODE, SELECT_BUTTON, UPLOAD_SERVER_URL } from '../../constants/constant';
+import { convertToMB } from '../../helpers/helper';
 import Button from '@mui/material/Button';
 //StopPropagation is stop the click event from bubling up.
 function dragEnter(e) {
@@ -54,7 +54,7 @@ function Upload({ handleQrGenerate }) {
       }
     });
 
-    xhr.open("POST", "http://localhost:5001/upload");
+    xhr.open("POST", UPLOAD_SERVER_URL);
     xhr.upload.onprogress = (event) => {
       setUploading((data) => ({ ...data, loaded: event.loaded, total: event.total }));
     };
@@ -150,10 +150,10 @@ function Upload({ handleQrGenerate }) {
             {GENERATE_QR_CODE}
           </Button>
         </QrGenerateButton>
-        <div>
+        {/* <div>
           <p>Remaining Time: {reaminingTime}</p>
           {console.log(reaminingTime)}
-        </div>
+        </div> */}
       </Card>
 
     </Wrapper>

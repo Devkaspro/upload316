@@ -1,5 +1,12 @@
-export const APPNAME = 'Kaspro Upload316';
 
+export const UPLOAD_SERVER_URL = "http://localhost:5001/upload";
+
+export const DOWNLOAD_LINK = "http://192.168.1.21:5001/upload/download/";
+
+
+
+
+export const APPNAME = 'Kaspro Upload316';
 // Home Page Content
 export const HOMEPAGE_TITLE = 'Development & In-house Apps Wireless Installation.!';
 export const HOMEPAGE_DESCRIPTION = 'Upload-316 is a tool for developers to deploy Development and In-house applications directly to the devices!';
@@ -28,4 +35,19 @@ export const GENERATE_QR_CODE = "Generate QR Code";
 // Abuot page context
 export const IOS_APPS = "iOS apps";
 export const ANDROID_APPS = "Android apps";
+
+// About us Android
+
+export const APP_INSTALLATION = "How app installation works";
+export const APP_COMPATIBILITY = "Compatibility";
+export const CAN_N_APP_INSTALL = "Can't install an app on a device? Things to check";
+export const APP_INFOFRMATION = "Getting more information with logcat";
+
+// About us iOS Divices
+export const COMMON_ERROR = "Device Supporting";
+export const iOS9_CHENGES = "Device Supporting";
+export const iOS8_CHENGES = "Device Supporting";
+export const xCODE_INFO = "Device Supporting";
+
+export const DUMMY_TEXT = "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Rhoncus dolor purus non enim praesent elementum facilisis leo vel.Risus at ultrices mi tempus; imperdiet.Semper risus in hendrerit gravida rutrum quisque non tellus Convallis convallis tellus id interdum velit laoreet id donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing.Amet nisl suscipitadipiscing bibendum est ultricies integer quis.Cursus euismod quis viverra nibh cras.Metus vulputate eu scelerisque felis imperdiet proin fermentum; leo.Mauris commodo quis imperdiet massa tincidunt.Cras tincidunt lobortis feugiat vivamus at augue.At augue eget arcu dictum varius duis at consectetur lorem.Velit sed ullamcorper morbi tincidunt.Lorem donec massa sapien faucibus et molestie ac.";
 

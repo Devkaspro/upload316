@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../../component/Footer/Footer';
-import Navbar from '../../component/Navbar';
+import Footer from '../../component/footer/Footer';
+import Navbar from '../../component/navbar';
 import { FEATURES_TITLE } from '../../constants/constant';
 import { FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle } from './style';
-import { features } from '../../Helpers/helper';
+import { features } from '../../helpers/helper';
 const Service = () => {
     return (
         <>
