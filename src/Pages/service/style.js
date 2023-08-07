@@ -63,3 +63,19 @@ export const DragandDropIcon = styled.div`
     padding-left: 2px;
     margin-right: 10px
 `;
+
+export const PricingMainContainer = styled.div`
+    //border: 1px solid #d4caca;
+    margin-top:20px;
+    padding:20px ;
+    width:94%;
+    ${ '' /* height:${ props => props.height }; */ }
+    ${ '' /* background:#fff; */ }
+    box-shadow:-3px -6px  78px rgba(0,0,
+    0,.1);
+    
+`;
+export const PricingTableContainer = styled.div`
+   
+    
+`;

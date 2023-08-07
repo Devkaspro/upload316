@@ -39,7 +39,7 @@ export const ButtonContainer = styled.div`
 `;
 export const FirstButton = styled(Button)`
     box-shadow: rgba(50, 145, 255, 0.15) 0px 2px 8px 0px;
-    padding: 0.5em 1em 0.5em 0.5em;
+    //padding: 0.5em 1em 0.5em 0.5em;
     border-radius: 10px;
     font-weight: 500;
     letter-spacing: -.01em;
@@ -82,4 +82,15 @@ export const UploadContainer = styled.div`
 `;
 export const QrCodeContainer = styled.div`
 
+`;
+export const TotalVisitor = styled.p`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 43px;
+    line-height: 1.3;
+    font-size: 27px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 `;

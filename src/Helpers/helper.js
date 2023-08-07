@@ -11,38 +11,38 @@ export const features = [
     {
         id: 0,
         icon: <PhoneIphoneIcon />,
-        tiitle: "iOS and Android App",
-        description: "Upload-316 works for iOS 4+ and Android 2+ apps and devices: development, ad-hoc and in-house builds can be installed wirelessly with a single tap."
+        tiitle: "App for iOS and Android",
+        description: "With Upload-316, wireless installation of development, ad-hoc, and internal builds is possible for iOS 4+ and Android 2+ apps and devices."
     },
     {
         id: 1,
         icon: <CloudUploadIcon />,
-        tiitle: "Drag & Drop File Upload Support",
-        description: "As a developer, simply drag&drop your ipa, zipped .app or apk into the field above and get a link to send to your testers/users/blogger/friends/…"
+        tiitle: "File Upload Support with Drag & Drop",
+        description: "Drag and drop your ipa, zipped.app, or apk into the form above to get a link that you can share with your testers, users, bloggers, friends, etc."
     },
     {
         id: 2,
         icon: <LinkIcon />,
-        tiitle: "One tab app installation",
-        description: "Using this link on their mobile device's browser, users will be able to download and install the app with just a single tap, nothing else"
+        tiitle: "Installing an app in one tab",
+        description: "Users will only need to hit this link on their mobile device's browser to download and install the app—no other action is required."
     },
     {
         id: 3,
         icon: <SecurityIcon />,
-        tiitle: "Privecy and protection",
-        description: "Links are private: no search or index. They can be password protected and strictly respect Apple's security rules with UDIDs and provisioning profiles."
+        tiitle: "Privacy and safety",
+        description: "Links are private; there is no index or search. With UDIDs and provisioning profiles, they are absolutely compliant with Apple's security regulations and can be password-protected."
     },
     {
         id: 4,
         icon: <ThumbUpOutlinedIcon />,
-        tiitle: "Simple tool for device compatibility",
-        description: "Retrieving the UDID? Checking if the app is compatible with the users' device? Upload316 provides simple tools to help with those boring tasks!"
+        tiitle: "a straightforward device compatibility tool",
+        description: "Getting the UDID back? checking to see if the user's device is compatible with the app? Simple tools are available from Upload316 to assist with those tedious activities!"
     },
     {
         id: 5,
         icon: <LoyaltyOutlinedIcon />,
-        tiitle: "Free to start, you'll love it",
-        description: "Most of this is free on Upload316! But you may also get an account with a lot more features: see below…"
+        tiitle: "You'll adore it when it's free to start.",
+        description: "On Upload316, the most of content is free! However, you might alternatively get a far more feature-rich account: view below.!"
     }
 ];
 

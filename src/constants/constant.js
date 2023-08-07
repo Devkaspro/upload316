@@ -3,13 +3,15 @@ export const UPLOAD_SERVER_URL = "http://localhost:5001/upload";
 
 export const DOWNLOAD_LINK = "http://192.168.1.21:5001/upload/download/";
 
+export const API_URL = "http://localhost:5001/";
+
 
 
 
 export const APPNAME = 'Kaspro Upload316';
 // Home Page Content
-export const HOMEPAGE_TITLE = 'Development & In-house Apps Wireless Installation.!';
-export const HOMEPAGE_DESCRIPTION = 'Upload-316 is a tool for developers to deploy Development and In-house applications directly to the devices!';
+export const HOMEPAGE_TITLE = 'Wireless installation of internal apps and development!';
+export const HOMEPAGE_DESCRIPTION = 'Developers can use Upload-316 as a tool to publish internal and development programmes to devices directly!';
 export const FEATURE_BTN = 'Features';
 export const SERVICES_BTN = 'Services';
 export const CONTACT_US_BTN = 'Contact Us';

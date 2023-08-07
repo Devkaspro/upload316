@@ -48,24 +48,26 @@ const Contact = () => {
                     noValidate
                 // autoComplete="off"
                 >
-                    <Typography variant="h4" align="center" mb={2}>
+                    <Typography variant="h4" align="center" mb={5}>
                         Contact Us
                     </Typography>
                     <form onSubmit={handleSubmit}>
                         <TextField
                             fullWidth
-                            // label="Name"
+                            label="Name"
                             type="text"
                             name="name"
                             value={formData.name}
                             placeholder="Name"
                             onChange={handleChange}
+                            style={{marginBottom:10}}
                             required
                         />
                         <TextField
                             fullWidth
-                            // label="Email"
+                            label="Email"
                             type="email"
+                            style={{marginBottom:10}}
                             name="email"
                             value={formData.email}
                             placeholder="Email"
@@ -74,8 +76,9 @@ const Contact = () => {
                         />
                         <TextField
                             fullWidth
-                            // label="Email"
+                            label="Subject"
                             type="text"
+                            style={{marginBottom:10}}
                             name="subject"
                             value={formData.subject}
                             placeholder="Subject"
@@ -84,12 +87,13 @@ const Contact = () => {
                         />
                         <TextField
                             fullWidth
-                            // label="Message"
+                            label="Message"
                             name="message"
                             value={formData.message}
                             placeholder="Your Message"
                             onChange={handleChange}
                             required
+                            style={{marginBottom:10}}
                             multiline
                             rows={4}
                         />

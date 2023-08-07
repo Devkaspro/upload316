@@ -6,7 +6,7 @@ import { QrContainer, QrDescription, QrMainContainer, QrTitle } from './style';
 const QrCodeBox = ({ link }) => {
     useEffect(() => {
         link = link;
-        console.log(link); // eslint-disable-line no-console
+        console.log(link);
     }, [link]);
 
     return (

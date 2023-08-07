@@ -2,14 +2,16 @@ import React from 'react';
 import Footer from '../../component/footer/Footer';
 import Navbar from '../../component/navbar';
 import { FEATURES_TITLE } from '../../constants/constant';
-import { FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle } from './style';
+import { FeatureDiscription, FeatureDiv, FeaturedIcons, FeaturedIconsDetails, FeaturesContainer, FeaturesMainContainer, FeaturesTitle, PricingTableContainer } from './style';
 import { features } from '../../helpers/helper';
+import PricingTableComponent from './pricingTable';
+import { Typography } from '@mui/material';
 const Service = () => {
     return (
         <>
             <Navbar />
             <FeaturesMainContainer>
-                <FeaturesTitle>{FEATURES_TITLE}</FeaturesTitle>
+                <Typography variant="h5">{FEATURES_TITLE}</Typography>
                 <FeaturesContainer>
                     {features.map((feature) => (
                         <FeatureDiv key={feature.id}>
@@ -25,8 +27,11 @@ const Service = () => {
                         </FeatureDiv>
                     ))}
                 </FeaturesContainer>
+                <PricingTableContainer>
+                    <PricingTableComponent />
+                </PricingTableContainer>
             </FeaturesMainContainer>
-            {/* <div style={{ height: '400px' }} /> */}
+            <div style={{ height: "1200px" }} />
             <Footer />
         </>
     );
